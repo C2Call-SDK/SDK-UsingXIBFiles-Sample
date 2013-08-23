@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Xvx-HE-KTn">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Call Status Controller-->
+        <scene sceneID="Gob-ei-64H">
+            <objects>
+                <viewController storyboardIdentifier="SCCallStatusController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xvx-HE-KTn" customClass="SCCallStatusController" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9H1-jH-Xe9" userLabel="View">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="VDi-uu-J4a">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="dfn-iu-Nfr">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="--" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="14" id="4gU-7P-uPf">
+                                                <rect key="frame" x="20" y="32" width="280" height="44"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.27450981740000002" green="0.62352943419999995" blue="0.80000007149999997" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="vOG-BW-1jW">
+                                        <rect key="frame" x="20" y="162" width="280" height="223"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="ZYQ-9Z-tO7" userLabel="middleView">
+                                                <rect key="frame" x="11" y="6" width="257" height="211"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6oU-2h-vl0">
+                                                        <rect key="frame" x="221" y="91" width="43" height="37"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                        <state key="normal" image="ico_micro.png">
+                                                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected" image="ico_micro_mute.png"/>
+                                                        <state key="highlighted" image="ico_micro_mute.png">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="muteMic:" destination="Xvx-HE-KTn" eventType="touchUpInside" id="3ae-Fr-ZXN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q3V-um-5zR">
+                                                        <rect key="frame" x="221" y="136" width="43" height="37"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                        <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="6"/>
+                                                        <state key="normal" image="ico_group.png">
+                                                            <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="activeMembers:" destination="Xvx-HE-KTn" eventType="touchUpInside" id="etH-dp-tbH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="00:00:00" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="qdu-h5-iTa" userLabel="labelDuration">
+                                                        <rect key="frame" x="45" y="13" width="134" height="37"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="36"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Dialing" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="dTJ-BW-OnJ" userLabel="labelConnectionState">
+                                                        <rect key="frame" x="45" y="88" width="134" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                        <color key="textColor" red="0.6417184722" green="0.77453905339999995" blue="0.25035894089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Data Rate : " textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="s2L-5S-GnP">
+                                                        <rect key="frame" x="20" y="152" width="71" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="0 kBit/s" lineBreakMode="tailTruncation" minimumFontSize="10" id="hGB-SX-zUL" userLabel="labelDataRate">
+                                                        <rect key="frame" x="92" y="152" width="119" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1bJ-lU-iI4">
+                                                        <rect key="frame" x="227" y="46" width="30" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                                        <state key="normal" title="" image="ico_voice.png">
+                                                            <color key="titleColor" cyan="0.44999999000000002" magenta="0.0" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="disabled" title="Spk">
+                                                            <color key="titleColor" cyan="0.44999999000000002" magenta="0.0" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                        </state>
+                                                        <state key="selected" title="" image="ico_voice_hover.png">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="highlighted" title="" image="ico_voice_hover.png">
+                                                            <color key="titleColor" cyan="0.44999999000000002" magenta="0.0" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="speaker:" destination="Xvx-HE-KTn" eventType="touchUpInside" id="FG4-zS-IQR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="coD-hU-Haf">
+                                                        <rect key="frame" x="227" y="0.0" width="30" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                                        <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" image="ico_dial.png">
+                                                            <color key="titleColor" red="0.19607843" green="0.30980393000000001" blue="0.52156866000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected" image="ico_dial_hover.png"/>
+                                                        <state key="highlighted" image="ico_dial_hover.png">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="showDialPad:" destination="Xvx-HE-KTn" eventType="touchUpInside" id="hmS-Rw-EGP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="--" lineBreakMode="tailTruncation" minimumFontSize="10" id="yww-7x-C4i" userLabel="labelMediastatus">
+                                                        <rect key="frame" x="39" y="190" width="120" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="0/0" lineBreakMode="tailTruncation" minimumFontSize="10" id="F0H-VM-BB3" userLabel="labelBuffer">
+                                                        <rect key="frame" x="39" y="162" width="87" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="img_connection_ok.png" id="6M9-1U-LOK">
+                                                        <rect key="frame" x="227" y="181" width="30" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58526392218925849" green="0.26611267925213694" blue="0.89657026529312134" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="bWM-K7-cCA">
+                                        <rect key="frame" x="0.0" y="441" width="320" height="107"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VFK-D5-NEl">
+                                                <rect key="frame" x="96" y="32" width="128" height="43"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Hang up" image="ico_hangup.png" backgroundImage="btn_hangup.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="disabled" title="Hang up">
+                                                    <color key="titleColor" red="0.77173913000000005" green="0.13161191" blue="0.17714526999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected" title="Hang up">
+                                                    <color key="titleColor" red="0.77173913000000005" green="0.13161191" blue="0.17714526999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="highlighted" title="Hang up" backgroundImage="btn_hangup_hover.png">
+                                                    <color key="titleColor" red="0.77173913000000005" green="0.13161191" blue="0.17714526999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hangUp:" destination="Xvx-HE-KTn" eventType="touchUpInside" id="SaT-aj-lQY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.27450981740000002" green="0.62352943419999995" blue="0.80000007149999997" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
+                                    <containerView hidden="YES" alpha="0.0" contentMode="scaleToFill" id="FYS-bJ-ngT" userLabel="keypadViewContainer">
+                                        <rect key="frame" x="0.0" y="107" width="320" height="334"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="8Ga-gY-Y76" kind="embed" identifier="SCKeypadControllerSegue" id="Mf3-Fr-Wtm"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="activeMembersButton" destination="Q3V-um-5zR" id="2tC-Z0-UB5"/>
+                        <outlet property="connectionQualityImage" destination="6M9-1U-LOK" id="pZh-mS-WgG"/>
+                        <outlet property="keypadViewContainer" destination="FYS-bJ-ngT" id="9lq-Or-qku"/>
+                        <outlet property="labelBuffer" destination="F0H-VM-BB3" id="TzJ-Jm-0zC"/>
+                        <outlet property="labelConnectionState" destination="dTJ-BW-OnJ" id="knW-nL-80Y"/>
+                        <outlet property="labelDataRate" destination="hGB-SX-zUL" id="Qve-Ud-70t"/>
+                        <outlet property="labelDuration" destination="qdu-h5-iTa" id="rWq-4h-mCs"/>
+                        <outlet property="labelMediaStatus" destination="yww-7x-C4i" id="Frv-B5-Rrf"/>
+                        <outlet property="labelName" destination="4gU-7P-uPf" id="CZa-iG-paG"/>
+                        <outlet property="middleview" destination="ZYQ-9Z-tO7" id="vr5-nm-Jef"/>
+                        <outlet property="speakerButton" destination="1bJ-lU-iI4" id="2lC-4I-ogj"/>
+                        <segue destination="cOo-xk-GWq" kind="modal" identifier="SCGroupVideoCallControllerSegue" modalTransitionStyle="crossDissolve" id="tCo-AL-4gb"/>
+                        <segue destination="WLH-sA-p6Z" kind="modal" identifier="SCVideoCallControllerSegue" modalTransitionStyle="crossDissolve" id="Qve-x1-Fpa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Lm-4p-bYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="145"/>
+        </scene>
+        <!--Video Call Controller-->
+        <scene sceneID="wyv-l8-RLr">
+            <objects>
+                <viewController storyboardIdentifier="SCVideoCallController" wantsFullScreenLayout="YES" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WLH-sA-p6Z" customClass="SCVideoCallController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mVF-D9-5xn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="z58-NF-h9Z" userLabel="innerView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_video_groupcall_one-568h@2x.png" id="H2Q-pu-b93">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="570"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <containerView contentMode="scaleToFill" id="GUh-XM-SHt" userLabel="videoView">
+                                        <rect key="frame" x="-2" y="-2" width="324" height="572"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="EZy-zG-dWA" kind="embed" id="kKa-Iq-zQw"/>
+                                        </connections>
+                                    </containerView>
+                                    <view hidden="YES" contentMode="scaleToFill" id="Fda-2b-cGO" userLabel="preview">
+                                        <rect key="frame" x="20" y="20" width="84" height="111"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="img_connection_ok.png" id="Rct-Yy-uxN">
+                                        <rect key="frame" x="271" y="511" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                    </imageView>
+                                    <containerView hidden="YES" contentMode="scaleToFill" id="1qv-6a-fMc" userLabel="ScreenControls View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="VgM-aj-Snn" kind="embed" identifier="ScreenControlsSegue" id="WCW-dr-B92"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                        <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="H2Q-pu-b93" id="FZZ-bE-i5H"/>
+                        <outlet property="connectionQualityImage" destination="Rct-Yy-uxN" id="ToU-Iy-Cwc"/>
+                        <outlet property="controlsView" destination="1qv-6a-fMc" id="qAv-1u-4i2"/>
+                        <outlet property="innerView" destination="z58-NF-h9Z" id="jtY-m1-0HE"/>
+                        <outlet property="previewView" destination="Fda-2b-cGO" id="ZBx-N0-455"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqj-Yl-Gdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1592" y="511"/>
+        </scene>
+        <!--ScreenControls-->
+        <scene sceneID="hk9-ql-AY6">
+            <objects>
+                <viewController storyboardIdentifier="ScreenControls" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VgM-aj-Snn" userLabel="ScreenControls" customClass="ScreenControls" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mb3-p3-9Ja">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" image="bg_footer.png" id="E11-df-jZl">
+                                <rect key="frame" x="0.0" y="495" width="320" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" image="bg_footer.png" id="7kP-Dy-zU0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="lUW-nl-Gym">
+                                <rect key="frame" x="51" y="117" width="218" height="44"/>
+                                <segments>
+                                    <segment title="" image="ico_no_kamera.png"/>
+                                    <segment title="" image="ico_front_kamera.png"/>
+                                    <segment title="" image="ico_back_kamera.png"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchCamera:" destination="z28-8V-wIr" eventType="valueChanged" id="JLh-Nf-xOT"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bezeled" selectedSegmentIndex="0" id="qH3-4Y-Z7L">
+                                <rect key="frame" x="51" y="117" width="218" height="44"/>
+                                <segments>
+                                    <segment title="" image="ico_no_kamera.png"/>
+                                    <segment title="" image="ico_back_kamera.png"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchCamera:" destination="z28-8V-wIr" eventType="valueChanged" id="3rU-44-jLH"/>
+                                </connections>
+                            </segmentedControl>
+                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" id="0b1-Yn-IRB" userLabel="StatusView">
+                                <rect key="frame" x="20" y="399" width="280" height="60"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="bg_prompt.png" id="MQV-ex-J6x">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12 Fps" lineBreakMode="tailTruncation" minimumFontSize="10" id="l3H-de-TmI" userLabel="labelFPSRecv">
+                                        <rect key="frame" x="20" y="6" width="118" height="15"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--" lineBreakMode="tailTruncation" minimumFontSize="10" id="zWY-97-xJd" userLabel="labelFPSWrite">
+                                        <rect key="frame" x="20" y="23" width="118" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="Sbc-zL-xhD" userLabel="labelMediaStatus">
+                                        <rect key="frame" x="152" y="23" width="108" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--" lineBreakMode="tailTruncation" minimumFontSize="10" id="EhC-3R-BHV" userLabel="labelSendRes">
+                                        <rect key="frame" x="20" y="41" width="118" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="jlw-1M-N4Y" userLabel="labelRecvRes">
+                                        <rect key="frame" x="152" y="41" width="108" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" id="t43-uT-AzC" userLabel="labelDataRate">
+                                        <rect key="frame" x="158" y="6" width="102" height="14"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Max Mustermann" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Fsy-i9-6u0">
+                                <rect key="frame" x="39" y="14" width="242" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zal-ce-36v">
+                                <rect key="frame" x="39" y="36" width="242" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Yg-fX-uqx">
+                                <rect key="frame" x="91" y="508" width="139" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Hang up" image="ico_hangup.png" backgroundImage="btn_hangup.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" title="Hang up">
+                                    <color key="titleColor" red="0.77173913000000005" green="0.13161191" blue="0.17714526999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="Hang up">
+                                    <color key="titleColor" red="0.77173913000000005" green="0.13161191" blue="0.17714526999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" title="Hang up" backgroundImage="btn_hangup_hover.png">
+                                    <color key="titleColor" red="0.77173913000000005" green="0.13161191" blue="0.17714526999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hangUp:" destination="z28-8V-wIr" eventType="touchUpInside" id="SjS-sQ-JOy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dhb-yT-JpL">
+                                <rect key="frame" x="261" y="513" width="43" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="ico_micro.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="ico_micro_mute.png"/>
+                                <state key="highlighted" image="ico_micro_mute.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="muteMic:" destination="z28-8V-wIr" eventType="touchUpInside" id="IfC-Mh-Dzq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.3999999762" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btnMicrophone" destination="dhb-yT-JpL" id="ntr-o0-mJa"/>
+                        <outlet property="cameraSwitch" destination="lUW-nl-Gym" id="ahR-Qk-zfM"/>
+                        <outlet property="cameraSwitch2" destination="qH3-4Y-Z7L" id="Nlq-Eo-gQ1"/>
+                        <outlet property="debugView" destination="0b1-Yn-IRB" id="mjW-tc-Yus"/>
+                        <outlet property="fpsRead" destination="l3H-de-TmI" id="HSt-ZU-ax8"/>
+                        <outlet property="fpsWrite" destination="zWY-97-xJd" id="iJd-QZ-aSX"/>
+                        <outlet property="labelDataRate" destination="t43-uT-AzC" id="6T8-hP-vIy"/>
+                        <outlet property="labelDuration" destination="Zal-ce-36v" id="dvt-UO-qxv"/>
+                        <outlet property="labelMediaStatus" destination="Sbc-zL-xhD" id="eVs-UT-tC6"/>
+                        <outlet property="labelName" destination="Fsy-i9-6u0" id="MyR-Pd-DjS"/>
+                        <outlet property="labelRecvRes" destination="jlw-1M-N4Y" id="zCF-HB-y04"/>
+                        <outlet property="labelSendRes" destination="EhC-3R-BHV" id="tVB-95-09p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z28-8V-wIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2087" y="-65"/>
+        </scene>
+        <!--EAGLViewController-->
+        <scene sceneID="ZAE-3D-rp8">
+            <objects>
+                <viewController storyboardIdentifier="EAGLViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EZy-zG-dWA" userLabel="EAGLViewController" customClass="EAGLViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MA2-Tf-uir" customClass="EAGLView">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeP-eG-PPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2087" y="697"/>
+        </scene>
+        <!--Group Video Call Controller-->
+        <scene sceneID="esb-sQ-Lv4">
+            <objects>
+                <viewController storyboardIdentifier="SCGroupVideoCallController" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cOo-xk-GWq" customClass="SCGroupVideoCallController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T5K-82-ogu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_video_groupcall.png" id="kyp-kR-s63">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="5Ta-sA-ihw" userLabel="innerView">
+                                <rect key="frame" x="0.0" y="71" width="320" height="426"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="aex-Gi-07n" userLabel="preview">
+                                        <rect key="frame" x="162" y="20" width="158" height="211"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <containerView hidden="YES" contentMode="scaleToFill" id="nta-Xu-sEI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="VgM-aj-Snn" kind="embed" identifier="ScreenControlsSegue" id="2Ya-AQ-jtH"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="img_connection_ok.png" id="CBF-rn-R4c" userLabel="iconConnection">
+                                <rect key="frame" x="270" y="518" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10588235" green="0.26666667999999999" blue="0.42745097999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="kyp-kR-s63" id="ZFo-6S-ozu"/>
+                        <outlet property="connectionQualityImage" destination="CBF-rn-R4c" id="cvl-ck-N9W"/>
+                        <outlet property="controlsView" destination="nta-Xu-sEI" id="Fua-Mb-aIV"/>
+                        <outlet property="innerView" destination="5Ta-sA-ihw" id="f7w-l5-vLY"/>
+                        <outlet property="previewView" destination="aex-Gi-07n" id="qxz-eb-gwo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qr0-df-erv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1600" y="-271"/>
+        </scene>
+        <!--Keypad Controller-->
+        <scene sceneID="HmR-9o-10y">
+            <objects>
+                <viewController storyboardIdentifier="SCKeypadController" id="8Ga-gY-Y76" customClass="SCKeypadController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CjI-n8-2YX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="334"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VXX-zY-qPL" userLabel="Dial Button 1">
+                                <rect key="frame" x="0.0" y="32" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z1.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="2Jz-cn-Gzm"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="5Gb-aJ-szi"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="Qxk-Qx-8xc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v5h-H6-xc7" userLabel="Dial Button 2">
+                                <rect key="frame" x="107" y="32" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z2.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="5gL-G7-s1z"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="ZYA-lO-Pce"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="b5H-CV-ZAO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Ec-qO-9GK" userLabel="Dial Button 3">
+                                <rect key="frame" x="214" y="32" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z3.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="Z9T-OA-wLP"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="rT1-Yj-qOc"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="Ala-8W-Uit"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XZa-Si-v4L" userLabel="Dial Button 4">
+                                <rect key="frame" x="0.0" y="90" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z4.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="OWS-u0-PwF"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="cqA-9C-wMD"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="aNp-sX-VAI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QDE-Y1-7Rc" userLabel="Dial Button 5">
+                                <rect key="frame" x="107" y="90" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z5.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="Hex-Np-KxL"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="oH4-jC-HCK"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="WIU-Vt-fGF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NKx-4P-41T" userLabel="Dial Button 6">
+                                <rect key="frame" x="214" y="90" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z6.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="4zv-Or-2pq"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="IIe-XU-wGy"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="ogt-a3-QOQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SMq-Sj-9F6" userLabel="Dial Button 7">
+                                <rect key="frame" x="0.0" y="148" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z7.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="BWS-Kc-iYk"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="b7w-Q0-ce8"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="VcJ-Tn-kb7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YOs-fO-AeY" userLabel="Dial Button 8">
+                                <rect key="frame" x="107" y="148" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z8.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="7Lw-po-WSF"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="rV1-PV-88q"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="lgf-wv-hWc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4jg-H4-xMR" userLabel="Dial Button 9">
+                                <rect key="frame" x="214" y="148" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z9.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="eGl-tB-UA3"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="jrP-YG-w0i"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="bLs-Cv-pB3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fc6-jW-Kfl" userLabel="Dial Button +">
+                                <rect key="frame" x="0.0" y="206" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="*">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled" image="ziffer_1.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="ziffer_1.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="ziffer_plus_h.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="80y-Vx-DGe"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="hSQ-mO-sYA"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="HBE-5T-asn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="p2a-as-CcU" userLabel="Dial Button 0">
+                                <rect key="frame" x="107" y="206" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" image="z0.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="AEL-Yo-RUN"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="eRI-ND-lai"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="6Mh-6f-8sa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6xc-kY-TFt" userLabel="Dial Button DEL">
+                                <rect key="frame" x="214" y="206" width="107" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="31"/>
+                                <state key="normal" title="#">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpOutside" id="a1P-jy-ZXP"/>
+                                    <action selector="endToneEvent:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="vry-X2-7AJ"/>
+                                    <action selector="startToneEvent:" destination="8Ga-gY-Y76" eventType="touchDown" id="YCO-dG-hv3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZKq-cv-uwo">
+                                <rect key="frame" x="115" y="270" width="90" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="8Ga-gY-Y76" eventType="touchUpInside" id="EFA-sE-09O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8O-NR-KDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="829"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_footer.png" width="320" height="49"/>
+        <image name="bg_prompt.png" width="319" height="60"/>
+        <image name="bg_video_groupcall.png" width="320" height="480"/>
+        <image name="bg_video_groupcall_one-568h@2x.png" width="640" height="1136"/>
+        <image name="btn_hangup.png" width="118" height="34"/>
+        <image name="btn_hangup_hover.png" width="118" height="34"/>
+        <image name="ico_back_kamera.png" width="43" height="26"/>
+        <image name="ico_dial.png" width="30" height="30"/>
+        <image name="ico_dial_hover.png" width="16" height="16"/>
+        <image name="ico_front_kamera.png" width="43" height="26"/>
+        <image name="ico_group.png" width="97" height="71"/>
+        <image name="ico_hangup.png" width="25" height="25"/>
+        <image name="ico_micro.png" width="86" height="52"/>
+        <image name="ico_micro_mute.png" width="86" height="52"/>
+        <image name="ico_no_kamera.png" width="43" height="26"/>
+        <image name="ico_voice.png" width="30" height="30"/>
+        <image name="ico_voice_hover.png" width="30" height="30"/>
+        <image name="img_connection_ok.png" width="22" height="19"/>
+        <image name="z0.png" width="45" height="36"/>
+        <image name="z1.png" width="45" height="36"/>
+        <image name="z2.png" width="45" height="36"/>
+        <image name="z3.png" width="45" height="36"/>
+        <image name="z4.png" width="45" height="36"/>
+        <image name="z5.png" width="45" height="36"/>
+        <image name="z6.png" width="45" height="36"/>
+        <image name="z7.png" width="45" height="36"/>
+        <image name="z8.png" width="45" height="36"/>
+        <image name="z9.png" width="45" height="36"/>
+        <image name="ziffer_1.png" width="16" height="16"/>
+        <image name="ziffer_plus_h.png" width="107" height="69"/>
+    </resources>
+    <classes>
+        <class className="C2ExpandViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/C2ExpandViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleExpandCollapse:"/>
+            </relationships>
+        </class>
+        <class className="SCCallStatusController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCCallStatusController.h"/>
+            <relationships>
+                <relationship kind="action" name="activeMembers:"/>
+                <relationship kind="action" name="hangUp:"/>
+                <relationship kind="action" name="muteMic:"/>
+                <relationship kind="action" name="showDialPad:"/>
+                <relationship kind="action" name="speaker:"/>
+                <relationship kind="outlet" name="activeMembersButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="backgroundImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="connectionQualityImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="keypadViewContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="labelConnectionState" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelDataRate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelDuration" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelMediaStatus" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelTimestamp" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="middleview" candidateClass="UIView"/>
+                <relationship kind="outlet" name="speakerButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SCGroupVideoCallController" superclassName="C2ExpandViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCGroupVideoCallController.h"/>
+            <relationships>
+                <relationship kind="action" name="hangUp:"/>
+                <relationship kind="action" name="muteMic:"/>
+                <relationship kind="action" name="switchCamera:"/>
+                <relationship kind="action" name="toggleVideoScreen:"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="barBackgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="barView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="connectionQualityImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="controlsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="innerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="previewView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="screenControls" candidateClass="ScreenControls"/>
+            </relationships>
+        </class>
+        <class className="SCKeypadController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCKeypadController.h"/>
+            <relationships>
+                <relationship kind="action" name="close:"/>
+                <relationship kind="action" name="endToneEvent:"/>
+                <relationship kind="action" name="startToneEvent:"/>
+            </relationships>
+        </class>
+        <class className="SCVideoCallController" superclassName="C2ExpandViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SCVideoCallController.h"/>
+            <relationships>
+                <relationship kind="action" name="hangUp:"/>
+                <relationship kind="action" name="muteMic:"/>
+                <relationship kind="action" name="switchCamera:"/>
+                <relationship kind="action" name="toggleVideoScreen:"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="connectionQualityImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="controlsView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="eaglViewController" candidateClass="EAGLViewController"/>
+                <relationship kind="outlet" name="innerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="previewView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="screenControls" candidateClass="ScreenControls"/>
+                <relationship kind="outlet" name="videoView" candidateClass="EAGLView"/>
+            </relationships>
+        </class>
+        <class className="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="closeViewControllerWithAnimation:"/>
+                <relationship kind="action" name="closeViewControllerWithoutAnimation:"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Ya-AQ-jtH"/>
+    </inferredMetricsTieBreakers>
+</document>
